@@ -15,6 +15,8 @@
 		184693131CBDEB9300995C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184693121CBDEB9300995C5B /* Assets.xcassets */; };
 		184693161CBDEB9300995C5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184693141CBDEB9300995C5B /* LaunchScreen.storyboard */; };
 		18DA0EAE1CBF67AA0045954F /* DoubleSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA0EAD1CBF67AA0045954F /* DoubleSliderView.swift */; };
+		391934141CCB63BA00B1680C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391934131CCB63BA00B1680C /* QuartzCore.framework */; };
+		391934161CCB6C2100B1680C /* PopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391934151CCB6C2100B1680C /* PopupController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		184693151CBDEB9300995C5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184693171CBDEB9300995C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DA0EAD1CBF67AA0045954F /* DoubleSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleSliderView.swift; sourceTree = "<group>"; };
+		391934131CCB63BA00B1680C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		391934151CCB6C2100B1680C /* PopupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391934141CCB63BA00B1680C /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,7 @@
 		184692FF1CBDEB9300995C5B = {
 			isa = PBXGroup;
 			children = (
+				391934131CCB63BA00B1680C /* QuartzCore.framework */,
 				1846930A1CBDEB9300995C5B /* loveHouse */,
 				184693091CBDEB9300995C5B /* Products */,
 			);
@@ -76,6 +82,7 @@
 		1846931D1CBDEE8E00995C5B /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				391934151CCB6C2100B1680C /* PopupController.swift */,
 				183E55201CC8B91200C9CA6B /* WebViewController.swift */,
 			);
 			name = viewControllers;
@@ -156,6 +163,7 @@
 				1846930E1CBDEB9300995C5B /* ViewController.swift in Sources */,
 				1846930C1CBDEB9300995C5B /* AppDelegate.swift in Sources */,
 				18DA0EAE1CBF67AA0045954F /* DoubleSliderView.swift in Sources */,
+				391934161CCB6C2100B1680C /* PopupController.swift in Sources */,
 				183E55211CC8B91200C9CA6B /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
