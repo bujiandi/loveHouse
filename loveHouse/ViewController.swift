@@ -39,6 +39,8 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
         
         // 默认选中第一项
         tabBar.selectedItem = tabBar.items?.first
+        
+
     }
     
     @IBAction func onPopupButtonTapped(button:UIButton) {
@@ -66,6 +68,9 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.None
     }
+    
+    
+
 
 }
 

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7226EB55748B797D4839555290ED41CAED34C860",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CFB6D658E1343E1CA26E6FDD9F53DA86C6ADF5BB" : 0,
+    "7226EB55748B797D4839555290ED41CAED34C860" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5D5C4DC7-891A-4DB0-952F-C0672A34272B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CFB6D658E1343E1CA26E6FDD9F53DA86C6ADF5BB" : "..",
+    "7226EB55748B797D4839555290ED41CAED34C860" : "loveHouse\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "loveHouse",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "loveHouse.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bujiandi\/loveHouse.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7226EB55748B797D4839555290ED41CAED34C860"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cherishlau\/Project.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CFB6D658E1343E1CA26E6FDD9F53DA86C6ADF5BB"
+    }
+  ]
+}

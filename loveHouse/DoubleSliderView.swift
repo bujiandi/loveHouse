@@ -236,6 +236,7 @@ class DoubleSliderView: UIView {
         self.leftProgress = minProgress
         self.rightProgress = maxProgress
         
+        
         animateSpeed = 8
 
     }
