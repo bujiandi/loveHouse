@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F28b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ebo-yf-Iyb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F28b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="24U-4X-GgF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -531,6 +531,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9J-M9-nim" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1814" y="1297"/>
+        </scene>
+        <!--House View Controller-->
+        <scene sceneID="oLB-9H-F8G">
+            <objects>
+                <viewController id="24U-4X-GgF" customClass="HouseViewController" customModule="loveHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vPL-b3-Pq7"/>
+                        <viewControllerLayoutGuide type="bottom" id="qZB-ns-NGo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lQt-e8-Xdf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg4-nw-A0A" customClass="ImageScrollView" customModule="loveHouse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="lja-XD-Y3G"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bg4-nw-A0A" firstAttribute="leading" secondItem="lQt-e8-Xdf" secondAttribute="leading" id="2v7-zT-BUo"/>
+                            <constraint firstItem="bg4-nw-A0A" firstAttribute="top" secondItem="lQt-e8-Xdf" secondAttribute="top" id="Uv7-KM-mIX"/>
+                            <constraint firstAttribute="trailing" secondItem="bg4-nw-A0A" secondAttribute="trailing" id="cVL-OE-45t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="bg4-nw-A0A" id="cFC-zK-3CK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wo2-j3-xdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595" y="2005"/>
         </scene>
     </scenes>
     <resources>
