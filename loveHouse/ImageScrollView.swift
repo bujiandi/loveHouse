@@ -16,12 +16,18 @@ class ImageScrollView: UIView,UIScrollViewDelegate {
     var pageControl:UIPageControl?
     var countLabel:UILabel?
     var scrollView:UIScrollView = UIScrollView()
+    let videoView = UIImageView()
+
     var contents:[(image:String,isVideo:Bool)] = [] {
         didSet {
             for content in contents {
                 let imageView = UIImageView()
                 imageView.contentMode = .ScaleAspectFill
                 imageView.image = UIImage(named:content.image)
+                if content.isVideo {
+                    videoView.image = UIImage(named: "play")
+                    imageView.addSubview(videoView)
+                }
                 scrollView.addSubview(imageView)
                 _imageViews.append(imageView)
             }
@@ -72,6 +78,7 @@ class ImageScrollView: UIView,UIScrollViewDelegate {
         pageControl!.frame = CGRectMake(0, bounds.height - 30, bounds.width, 30)
         pageControl!.numberOfPages = _imageViews.count
         countLabel?.frame = CGRectMake(bounds.width - 60,bounds.height - 31, 50, 21)
+        videoView.frame = CGRectMake((bounds.width - 60)/2, (bounds.height - 60)/2, 60, 60)
         loadVisiblePage()
     }
     
@@ -87,6 +94,7 @@ class ImageScrollView: UIView,UIScrollViewDelegate {
             _currentPage = index
         }
     }
+    
 
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let pageWidth = scrollView.frame.size.width
@@ -97,7 +105,5 @@ class ImageScrollView: UIView,UIScrollViewDelegate {
         countLabel?.text = "\(_currentPage+1)/\(_imageViews.count)"
 
     }
-
-    
     
 }

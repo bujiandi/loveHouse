@@ -13,6 +13,7 @@ class HouseViewController: UIViewController {
     @IBOutlet weak var imageView: ImageScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.contents = [(image:"house-1.jpg",isVideo:false),(image:"house-2.jpg",isVideo:false),(image:"house-3.jpg",isVideo:false)]
+        imageView.contents = [(image:"house-1.jpg",isVideo:false),(image:"house-2.jpg",isVideo:false),(image:"house-3.jpg",isVideo:true)]
     }
 }
+

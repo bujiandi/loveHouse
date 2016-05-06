@@ -39,8 +39,8 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
         
         // 默认选中第一项
         tabBar.selectedItem = tabBar.items?.first
+        tabBar.items!.first?.badgeValue = nil
         
-
     }
     
     @IBAction func onPopupButtonTapped(button:UIButton) {

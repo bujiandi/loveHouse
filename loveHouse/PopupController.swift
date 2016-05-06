@@ -119,6 +119,8 @@ class PopupController: UIViewController,UITableViewDelegate,UITableViewDataSourc
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if tableView === firstTableView {
+            _selectedRow = indexPath.row
+
             thirdTableWidthConstraint.constant = 0
             //如果是第一列，我们需要判断点击的是第几行cell，然后切换数据源
             if indexPath.row == 0 {
