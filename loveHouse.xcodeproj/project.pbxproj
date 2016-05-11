@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180517FF1CDE21E400DD5E59 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180517FE1CDE21E400DD5E59 /* MessageViewController.swift */; };
-		180518011CDF222D00DD5E59 /* Toast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180518001CDF222D00DD5E59 /* Toast+UIView.swift */; };
 		180518071CDF78E500DD5E59 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180518061CDF78E500DD5E59 /* FilterTableViewController.swift */; };
-		180518091CDF877800DD5E59 /* CircleSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180518081CDF877800DD5E59 /* CircleSpinnerView.swift */; };
-		1805180B1CE2102900DD5E59 /* CLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1805180A1CE2102900DD5E59 /* CLAlertView.swift */; };
-		180518111CE2D5CF00DD5E59 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180518101CE2D5CF00DD5E59 /* StepperView.swift */; };
 		180518151CE327FD00DD5E59 /* UIViewController+Semi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180518141CE327FD00DD5E59 /* UIViewController+Semi.swift */; };
 		180732BB1CCF088300DD4315 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180732BA1CCF088300DD4315 /* MenuViewController.swift */; };
 		183E55211CC8B91200C9CA6B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E55201CC8B91200C9CA6B /* WebViewController.swift */; };
@@ -23,31 +19,31 @@
 		184693161CBDEB9300995C5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184693141CBDEB9300995C5B /* LaunchScreen.storyboard */; };
 		184C65901CD2FCAD00E7ABD8 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C658F1CD2FCAD00E7ABD8 /* DataTableViewController.swift */; };
 		184C65941CD3380200E7ABD8 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C65931CD3380200E7ABD8 /* HouseViewController.swift */; };
-		184C65961CD3385A00E7ABD8 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C65951CD3385A00E7ABD8 /* ImageScrollView.swift */; };
-		184C65981CD33DEB00E7ABD8 /* ScrollTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C65971CD33DEB00E7ABD8 /* ScrollTabView.swift */; };
-		184C659D1CD8CE5400E7ABD8 /* house-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 184C659A1CD8CE5400E7ABD8 /* house-1.jpg */; };
-		184C659E1CD8CE5400E7ABD8 /* house-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 184C659B1CD8CE5400E7ABD8 /* house-2.jpg */; };
-		184C659F1CD8CE5400E7ABD8 /* house-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 184C659C1CD8CE5400E7ABD8 /* house-3.jpg */; };
 		1861DA4B1CD0970D00F3F1A5 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 1861DA4A1CD0970D00F3F1A5 /* data.json */; };
-		18B0E8A81CDC724F00F5123C /* financing.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0E8A31CDC724F00F5123C /* financing.png */; };
-		18B0E8A91CDC724F00F5123C /* new_house.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0E8A41CDC724F00F5123C /* new_house.png */; };
-		18B0E8AA1CDC724F00F5123C /* old_house.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0E8A51CDC724F00F5123C /* old_house.png */; };
-		18B0E8AB1CDC724F00F5123C /* owner.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0E8A61CDC724F00F5123C /* owner.png */; };
-		18B0E8AC1CDC724F00F5123C /* renting_house.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0E8A71CDC724F00F5123C /* renting_house.png */; };
 		18B0E8AE1CDC7EEB00F5123C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0E8AD1CDC7EEB00F5123C /* MainViewController.swift */; };
 		18B0E8B01CDC8FA500F5123C /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0E8AF1CDC8FA500F5123C /* UserTableViewController.swift */; };
-		18DA0EAE1CBF67AA0045954F /* DoubleSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA0EAD1CBF67AA0045954F /* DoubleSliderView.swift */; };
 		18DFEF621CE34BCE009D855D /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFEF611CE34BCE009D855D /* BookingViewController.swift */; };
+		18DFEF6C1CE34F75009D855D /* CircleSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFEF651CE34F75009D855D /* CircleSpinnerView.swift */; };
+		18DFEF6D1CE34F75009D855D /* CLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFEF661CE34F75009D855D /* CLAlertView.swift */; };
+		18DFEF6E1CE34F75009D855D /* DoubleSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFEF671CE34F75009D855D /* DoubleSliderView.swift */; };
+		18DFEF6F1CE34F75009D855D /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFEF681CE34F75009D855D /* ImageScrollView.swift */; };
+		18DFEF701CE34F75009D855D /* ScrollTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFEF691CE34F75009D855D /* ScrollTabView.swift */; };
+		18DFEF711CE34F75009D855D /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFEF6A1CE34F75009D855D /* StepperView.swift */; };
+		18DFEF721CE34F75009D855D /* Toast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFEF6B1CE34F75009D855D /* Toast+UIView.swift */; };
+		18DFEF8B1CE34FDC009D855D /* financing.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFEF831CE34FDC009D855D /* financing.png */; };
+		18DFEF8C1CE34FDC009D855D /* house-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DFEF841CE34FDC009D855D /* house-1.jpg */; };
+		18DFEF8D1CE34FDC009D855D /* house-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DFEF851CE34FDC009D855D /* house-2.jpg */; };
+		18DFEF8E1CE34FDC009D855D /* house-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DFEF861CE34FDC009D855D /* house-3.jpg */; };
+		18DFEF8F1CE34FDC009D855D /* new_house.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFEF871CE34FDC009D855D /* new_house.png */; };
+		18DFEF901CE34FDC009D855D /* old_house.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFEF881CE34FDC009D855D /* old_house.png */; };
+		18DFEF911CE34FDC009D855D /* owner.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFEF891CE34FDC009D855D /* owner.png */; };
+		18DFEF921CE34FDC009D855D /* renting_house.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFEF8A1CE34FDC009D855D /* renting_house.png */; };
 		391934161CCB6C2100B1680C /* PopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391934151CCB6C2100B1680C /* PopupController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		180517FE1CDE21E400DD5E59 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = viewControllers/MessageViewController.swift; sourceTree = "<group>"; };
-		180518001CDF222D00DD5E59 /* Toast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Toast+UIView.swift"; path = "views/Toast+UIView.swift"; sourceTree = "<group>"; };
 		180518061CDF78E500DD5E59 /* FilterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterTableViewController.swift; path = viewControllers/FilterTableViewController.swift; sourceTree = "<group>"; };
-		180518081CDF877800DD5E59 /* CircleSpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleSpinnerView.swift; path = views/CircleSpinnerView.swift; sourceTree = "<group>"; };
-		1805180A1CE2102900DD5E59 /* CLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLAlertView.swift; sourceTree = "<group>"; };
-		180518101CE2D5CF00DD5E59 /* StepperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepperView.swift; path = views/StepperView.swift; sourceTree = "<group>"; };
 		180518141CE327FD00DD5E59 /* UIViewController+Semi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Semi.swift"; sourceTree = "<group>"; };
 		180732BA1CCF088300DD4315 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = viewControllers/MenuViewController.swift; sourceTree = "<group>"; };
 		183E55201CC8B91200C9CA6B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = viewControllers/WebViewController.swift; sourceTree = "<group>"; };
@@ -60,21 +56,25 @@
 		184693171CBDEB9300995C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184C658F1CD2FCAD00E7ABD8 /* DataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataTableViewController.swift; path = viewControllers/DataTableViewController.swift; sourceTree = "<group>"; };
 		184C65931CD3380200E7ABD8 /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseViewController.swift; path = viewControllers/HouseViewController.swift; sourceTree = "<group>"; };
-		184C65951CD3385A00E7ABD8 /* ImageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
-		184C65971CD33DEB00E7ABD8 /* ScrollTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollTabView.swift; sourceTree = "<group>"; };
-		184C659A1CD8CE5400E7ABD8 /* house-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "house-1.jpg"; sourceTree = "<group>"; };
-		184C659B1CD8CE5400E7ABD8 /* house-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "house-2.jpg"; sourceTree = "<group>"; };
-		184C659C1CD8CE5400E7ABD8 /* house-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "house-3.jpg"; sourceTree = "<group>"; };
 		1861DA4A1CD0970D00F3F1A5 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		18B0E8A31CDC724F00F5123C /* financing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financing.png; sourceTree = "<group>"; };
-		18B0E8A41CDC724F00F5123C /* new_house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_house.png; sourceTree = "<group>"; };
-		18B0E8A51CDC724F00F5123C /* old_house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = old_house.png; sourceTree = "<group>"; };
-		18B0E8A61CDC724F00F5123C /* owner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owner.png; sourceTree = "<group>"; };
-		18B0E8A71CDC724F00F5123C /* renting_house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = renting_house.png; sourceTree = "<group>"; };
 		18B0E8AD1CDC7EEB00F5123C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = viewControllers/MainViewController.swift; sourceTree = "<group>"; };
 		18B0E8AF1CDC8FA500F5123C /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTableViewController.swift; path = viewControllers/UserTableViewController.swift; sourceTree = "<group>"; };
-		18DA0EAD1CBF67AA0045954F /* DoubleSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleSliderView.swift; sourceTree = "<group>"; };
 		18DFEF611CE34BCE009D855D /* BookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookingViewController.swift; path = viewControllers/BookingViewController.swift; sourceTree = "<group>"; };
+		18DFEF651CE34F75009D855D /* CircleSpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleSpinnerView.swift; sourceTree = "<group>"; };
+		18DFEF661CE34F75009D855D /* CLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLAlertView.swift; sourceTree = "<group>"; };
+		18DFEF671CE34F75009D855D /* DoubleSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleSliderView.swift; sourceTree = "<group>"; };
+		18DFEF681CE34F75009D855D /* ImageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		18DFEF691CE34F75009D855D /* ScrollTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollTabView.swift; sourceTree = "<group>"; };
+		18DFEF6A1CE34F75009D855D /* StepperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
+		18DFEF6B1CE34F75009D855D /* Toast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Toast+UIView.swift"; sourceTree = "<group>"; };
+		18DFEF831CE34FDC009D855D /* financing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = financing.png; sourceTree = "<group>"; };
+		18DFEF841CE34FDC009D855D /* house-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "house-1.jpg"; sourceTree = "<group>"; };
+		18DFEF851CE34FDC009D855D /* house-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "house-2.jpg"; sourceTree = "<group>"; };
+		18DFEF861CE34FDC009D855D /* house-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "house-3.jpg"; sourceTree = "<group>"; };
+		18DFEF871CE34FDC009D855D /* new_house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_house.png; sourceTree = "<group>"; };
+		18DFEF881CE34FDC009D855D /* old_house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = old_house.png; sourceTree = "<group>"; };
+		18DFEF891CE34FDC009D855D /* owner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owner.png; sourceTree = "<group>"; };
+		18DFEF8A1CE34FDC009D855D /* renting_house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = renting_house.png; sourceTree = "<group>"; };
 		391934151CCB6C2100B1680C /* PopupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,19 +108,15 @@
 		1846930A1CBDEB9300995C5B /* loveHouse */ = {
 			isa = PBXGroup;
 			children = (
-				1805180A1CE2102900DD5E59 /* CLAlertView.swift */,
-				184C65991CD8CE4400E7ABD8 /* images */,
+				18DFEF821CE34FDC009D855D /* images */,
+				18DFEF641CE34F75009D855D /* views */,
 				1861DA4A1CD0970D00F3F1A5 /* data.json */,
 				1846931D1CBDEE8E00995C5B /* viewControllers */,
 				1846930B1CBDEB9300995C5B /* AppDelegate.swift */,
-				1846930D1CBDEB9300995C5B /* ViewController.swift */,
-				180518101CE2D5CF00DD5E59 /* StepperView.swift */,
-				18DA0EAD1CBF67AA0045954F /* DoubleSliderView.swift */,
 				1846930F1CBDEB9300995C5B /* Main.storyboard */,
 				184693121CBDEB9300995C5B /* Assets.xcassets */,
 				184693141CBDEB9300995C5B /* LaunchScreen.storyboard */,
 				184693171CBDEB9300995C5B /* Info.plist */,
-				184C65951CD3385A00E7ABD8 /* ImageScrollView.swift */,
 			);
 			path = loveHouse;
 			sourceTree = "<group>";
@@ -128,8 +124,8 @@
 		1846931D1CBDEE8E00995C5B /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1846930D1CBDEB9300995C5B /* ViewController.swift */,
 				180518141CE327FD00DD5E59 /* UIViewController+Semi.swift */,
-				184C65971CD33DEB00E7ABD8 /* ScrollTabView.swift */,
 				391934151CCB6C2100B1680C /* PopupController.swift */,
 				183E55201CC8B91200C9CA6B /* WebViewController.swift */,
 				180732BA1CCF088300DD4315 /* MenuViewController.swift */,
@@ -138,27 +134,39 @@
 				18B0E8AD1CDC7EEB00F5123C /* MainViewController.swift */,
 				18B0E8AF1CDC8FA500F5123C /* UserTableViewController.swift */,
 				180517FE1CDE21E400DD5E59 /* MessageViewController.swift */,
-				180518001CDF222D00DD5E59 /* Toast+UIView.swift */,
 				180518061CDF78E500DD5E59 /* FilterTableViewController.swift */,
-				180518081CDF877800DD5E59 /* CircleSpinnerView.swift */,
 				18DFEF611CE34BCE009D855D /* BookingViewController.swift */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
 		};
-		184C65991CD8CE4400E7ABD8 /* images */ = {
+		18DFEF641CE34F75009D855D /* views */ = {
 			isa = PBXGroup;
 			children = (
-				18B0E8A31CDC724F00F5123C /* financing.png */,
-				18B0E8A41CDC724F00F5123C /* new_house.png */,
-				18B0E8A51CDC724F00F5123C /* old_house.png */,
-				18B0E8A61CDC724F00F5123C /* owner.png */,
-				18B0E8A71CDC724F00F5123C /* renting_house.png */,
-				184C659A1CD8CE5400E7ABD8 /* house-1.jpg */,
-				184C659B1CD8CE5400E7ABD8 /* house-2.jpg */,
-				184C659C1CD8CE5400E7ABD8 /* house-3.jpg */,
+				18DFEF651CE34F75009D855D /* CircleSpinnerView.swift */,
+				18DFEF661CE34F75009D855D /* CLAlertView.swift */,
+				18DFEF671CE34F75009D855D /* DoubleSliderView.swift */,
+				18DFEF681CE34F75009D855D /* ImageScrollView.swift */,
+				18DFEF691CE34F75009D855D /* ScrollTabView.swift */,
+				18DFEF6A1CE34F75009D855D /* StepperView.swift */,
+				18DFEF6B1CE34F75009D855D /* Toast+UIView.swift */,
 			);
-			name = images;
+			path = views;
+			sourceTree = "<group>";
+		};
+		18DFEF821CE34FDC009D855D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				18DFEF831CE34FDC009D855D /* financing.png */,
+				18DFEF841CE34FDC009D855D /* house-1.jpg */,
+				18DFEF851CE34FDC009D855D /* house-2.jpg */,
+				18DFEF861CE34FDC009D855D /* house-3.jpg */,
+				18DFEF871CE34FDC009D855D /* new_house.png */,
+				18DFEF881CE34FDC009D855D /* old_house.png */,
+				18DFEF891CE34FDC009D855D /* owner.png */,
+				18DFEF8A1CE34FDC009D855D /* renting_house.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,18 +227,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B0E8A91CDC724F00F5123C /* new_house.png in Resources */,
+				18DFEF8F1CE34FDC009D855D /* new_house.png in Resources */,
 				184693161CBDEB9300995C5B /* LaunchScreen.storyboard in Resources */,
-				18B0E8AC1CDC724F00F5123C /* renting_house.png in Resources */,
+				18DFEF921CE34FDC009D855D /* renting_house.png in Resources */,
+				18DFEF8D1CE34FDC009D855D /* house-2.jpg in Resources */,
 				184693131CBDEB9300995C5B /* Assets.xcassets in Resources */,
+				18DFEF901CE34FDC009D855D /* old_house.png in Resources */,
+				18DFEF8C1CE34FDC009D855D /* house-1.jpg in Resources */,
 				184693111CBDEB9300995C5B /* Main.storyboard in Resources */,
-				18B0E8AA1CDC724F00F5123C /* old_house.png in Resources */,
+				18DFEF911CE34FDC009D855D /* owner.png in Resources */,
+				18DFEF8B1CE34FDC009D855D /* financing.png in Resources */,
+				18DFEF8E1CE34FDC009D855D /* house-3.jpg in Resources */,
 				1861DA4B1CD0970D00F3F1A5 /* data.json in Resources */,
-				184C659F1CD8CE5400E7ABD8 /* house-3.jpg in Resources */,
-				18B0E8AB1CDC724F00F5123C /* owner.png in Resources */,
-				18B0E8A81CDC724F00F5123C /* financing.png in Resources */,
-				184C659D1CD8CE5400E7ABD8 /* house-1.jpg in Resources */,
-				184C659E1CD8CE5400E7ABD8 /* house-2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,26 +249,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1805180B1CE2102900DD5E59 /* CLAlertView.swift in Sources */,
 				1846930E1CBDEB9300995C5B /* ViewController.swift in Sources */,
 				180517FF1CDE21E400DD5E59 /* MessageViewController.swift in Sources */,
+				18DFEF6C1CE34F75009D855D /* CircleSpinnerView.swift in Sources */,
 				18B0E8AE1CDC7EEB00F5123C /* MainViewController.swift in Sources */,
 				1846930C1CBDEB9300995C5B /* AppDelegate.swift in Sources */,
 				180732BB1CCF088300DD4315 /* MenuViewController.swift in Sources */,
-				184C65961CD3385A00E7ABD8 /* ImageScrollView.swift in Sources */,
-				180518111CE2D5CF00DD5E59 /* StepperView.swift in Sources */,
-				18DA0EAE1CBF67AA0045954F /* DoubleSliderView.swift in Sources */,
 				391934161CCB6C2100B1680C /* PopupController.swift in Sources */,
+				18DFEF711CE34F75009D855D /* StepperView.swift in Sources */,
+				18DFEF701CE34F75009D855D /* ScrollTabView.swift in Sources */,
 				184C65901CD2FCAD00E7ABD8 /* DataTableViewController.swift in Sources */,
 				183E55211CC8B91200C9CA6B /* WebViewController.swift in Sources */,
 				184C65941CD3380200E7ABD8 /* HouseViewController.swift in Sources */,
+				18DFEF6F1CE34F75009D855D /* ImageScrollView.swift in Sources */,
+				18DFEF6E1CE34F75009D855D /* DoubleSliderView.swift in Sources */,
 				18B0E8B01CDC8FA500F5123C /* UserTableViewController.swift in Sources */,
-				180518011CDF222D00DD5E59 /* Toast+UIView.swift in Sources */,
 				180518151CE327FD00DD5E59 /* UIViewController+Semi.swift in Sources */,
+				18DFEF721CE34F75009D855D /* Toast+UIView.swift in Sources */,
+				18DFEF6D1CE34F75009D855D /* CLAlertView.swift in Sources */,
 				180518071CDF78E500DD5E59 /* FilterTableViewController.swift in Sources */,
-				180518091CDF877800DD5E59 /* CircleSpinnerView.swift in Sources */,
 				18DFEF621CE34BCE009D855D /* BookingViewController.swift in Sources */,
-				184C65981CD33DEB00E7ABD8 /* ScrollTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
