@@ -104,15 +104,15 @@ class DoubleSliderView: UIView {
         }
     }
     
-    
+    var contentInset:CGFloat = 10
     override func layoutSublayersOfLayer(layer: CALayer) {
-        let centerY = bounds.height / 2 + 15
+        let centerY = bounds.height / 2 + 30
         let contentWidth:CGFloat = bounds.width - radius * 2
         progressBackground.frame = CGRectMake(radius, centerY, contentWidth, 2)
-        let leftX = contentWidth * (leftProgress / maxProgress) + radius
+        let leftX = contentWidth * (leftProgress / maxProgress) + radius + contentInset
         
-        let rightX = contentWidth * (rightProgress / maxProgress) + radius
-        let width = contentWidth * (rightProgress / maxProgress) - leftX + radius
+        let rightX = contentWidth * (rightProgress / maxProgress) + radius - contentInset
+        let width = contentWidth * (rightProgress / maxProgress) - leftX + radius - contentInset * 2
 
         progressLine.frame = CGRectMake(leftX, 0, width, 2)
         

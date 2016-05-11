@@ -10,6 +10,16 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    @IBOutlet var buttons: [UIButton]! {
+        didSet {
+            for button in buttons {
+                button.imageView?.contentMode = .ScaleAspectFill
+            }
+        }
+    }
+    
+    
+    
     @IBOutlet weak var menuView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()

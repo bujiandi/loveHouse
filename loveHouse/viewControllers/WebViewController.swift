@@ -28,24 +28,32 @@ class WebViewController: UIViewController,UIWebViewDelegate {
             processView.progress = 0
         }
     }
+    
     @IBOutlet weak var webView: UIWebView!
     var myTimer:NSTimer?
     var finished:Bool = true
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = NSURL(string:"https://www.google.com")
+        let url = NSURL(string:"https://www.github.com")
         webView.loadRequest(NSURLRequest(URL: url!))
-        
     }
 
+    
+    override func viewWillAppear(animated: Bool) {
+        navigationController?.navigationBarHidden = false
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        navigationController?.navigationBarHidden = true
+    }
+    
     func webViewDidStartLoad(webView: UIWebView) {
-        
         processView.progress = 0
         finished = false
         //0.01667 is roughly 1/60, so it will update at 60 FPS
         myTimer = NSTimer.scheduledTimerWithTimeInterval(0.01667, target: self, selector: #selector(WebViewController.timerCallback), userInfo: nil, repeats: true)
-        
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {

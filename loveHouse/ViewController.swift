@@ -13,7 +13,17 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
     @IBOutlet weak var searchButton:UIButton!
     @IBOutlet weak var topContainer:UIView!
     @IBOutlet weak var shadowView:UIView!
-    @IBOutlet weak var tabBar:UITabBar!
+    
+    
+    @IBAction func onListTapping(sender:AnyObject!) {
+        
+        if let controller = storyboard?.instantiateViewControllerWithIdentifier("FilterTableViewController") {
+            controller.view.frame.size.height = UIScreen.mainScreen().bounds.height - 200
+            
+            presentSemiViewController(controller)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,17 +40,8 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
         shadowView.layer.shadowColor   = UIColor.grayColor().CGColor
         shadowView.layer.shadowRadius  = 4
         shadowView.layer.shadowOpacity = 0.8
-        
-        // 给底部工具条添加阴影
-        tabBar.layer.shadowOffset  = CGSizeMake(0, 1)
-        tabBar.layer.shadowColor   = UIColor.grayColor().CGColor
-        tabBar.layer.shadowRadius  = 4
-        tabBar.layer.shadowOpacity = 0.8
-        
-        // 默认选中第一项
-        tabBar.selectedItem = tabBar.items?.first
-        tabBar.items!.first?.badgeValue = nil
-        
+
+
     }
     
     @IBAction func onPopupButtonTapped(button:UIButton) {

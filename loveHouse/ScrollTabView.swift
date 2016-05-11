@@ -22,49 +22,49 @@ class ScrollTabView: UIView,UIScrollViewDelegate {
     }
     var contentOffset:CGFloat = 110
     private var viewControllerIDs:[String] = []
-        var contents:[(title:String,image:String?,storyboardID:String)] = [] {
-            didSet {
-                for _ in 0..<contents.count {
-                    self.pageViews.append(nil)
+    var contents:[(title:String,image:String?,storyboardID:String)] = [] {
+        didSet {
+            for _ in 0..<contents.count {
+                self.pageViews.append(nil)
+            }
+            toolBarView = UIView(frame:CGRectMake(0, contentOffset, UIScreen.mainScreen().bounds.width, 44))
+            scrollView = UIScrollView(frame: CGRect(x: 0, y: contentOffset + toolBarView!.bounds.height, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - (contentOffset+toolBarView!.frame.height)))
+            buttons.forEach({ $0.removeFromSuperview() })
+            buttons = []
+            for (title,image,storybardID) in contents {
+                viewControllerIDs.append(storybardID)
+                let button = UIButton(type:.Custom)
+                button.imageEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0)
+                button.titleLabel?.font = UIFont.systemFontOfSize(13)
+                button.setTitleColor(UIColor.grayColor(), forState: .Normal)
+                button.setTitleColor(tintColor, forState: .Highlighted)
+                button.setTitle(title, forState: .Normal)
+                if let icon = image {
+                    button.setImage(UIImage(named:icon), forState: UIControlState.Normal)
+                    button.setImage(UIImage(named:icon+"_highlight"), forState: UIControlState.Highlighted)
                 }
-                toolBarView = UIView(frame:CGRectMake(0, contentOffset, UIScreen.mainScreen().bounds.width, 44))
-                scrollView = UIScrollView(frame: CGRect(x: 0, y: contentOffset + toolBarView!.bounds.height, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - (contentOffset+toolBarView!.frame.height)))
-                buttons.forEach({ $0.removeFromSuperview() })
-                buttons = []
-                for (title,image,storybardID) in contents {
-                    viewControllerIDs.append(storybardID)
-                    let button = UIButton(type:.Custom)
-                    button.imageEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0)
-                    button.titleLabel?.font = UIFont.systemFontOfSize(13)
-                    button.setTitleColor(UIColor.grayColor(), forState: .Normal)
-                    button.setTitleColor(UIColor(red:253/255,green:152/255,blue:64/255,alpha:1), forState: .Highlighted)
-                    button.setTitle(title, forState: .Normal)
-                    if let icon = image {
-                        button.setImage(UIImage(named:icon), forState: UIControlState.Normal)
-                        button.setImage(UIImage(named:icon+"_highlight"), forState: UIControlState.Highlighted)
-                    }
-                    button.userInteractionEnabled = false
-                    button.sizeToFit()
-                    button.frame.origin.y = (44 - button.frame.height)/2
-                    
-                    buttons.append(button)
-                    toolBarView!.addSubview(button)
-                    addSubview(toolBarView!)
-                    addSubview(scrollView!)
-                }
+                button.userInteractionEnabled = false
+                button.sizeToFit()
+                button.frame.origin.y = (44 - button.frame.height)/2
+                
+                buttons.append(button)
+                toolBarView!.addSubview(button)
+                addSubview(toolBarView!)
+                addSubview(scrollView!)
             }
         }
+    }
     
     private var buttons:[UIButton] = []
     let borderLayer:CALayer = CALayer()
-
-    let averageSpace:CGFloat = 20
-
+    
+    let averageSpace:CGFloat = 0
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         updateSubViews()
     }
-
+    
     
     override func willMoveToSuperview(newSuperview: UIView?) {
         super.willMoveToSuperview(newSuperview)
@@ -79,7 +79,9 @@ class ScrollTabView: UIView,UIScrollViewDelegate {
         toolBarView?.addGestureRecognizer(pan)
         
         borderLayer.frame = CGRectMake(0, 30, 0, 2)
-        borderLayer.backgroundColor = UIColor(red:253/255,green:152/255,blue:64/255,alpha:1).CGColor
+        borderLayer.backgroundColor = tintColor.CGColor
+        
+        
         toolBarView?.layer.insertSublayer(borderLayer, atIndex: 0)
         let pagesScrollViewSize = self.scrollView.frame.size
         self.scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(viewControllerIDs.count), height: pagesScrollViewSize.height)
@@ -92,40 +94,47 @@ class ScrollTabView: UIView,UIScrollViewDelegate {
     func onScroll(pan:UIPanGestureRecognizer) {
         highlightedButtonAtPoint(pan.locationInView(toolBarView!))
     }
-
+    
     //手势点击方法
     func onTap(tap:UITapGestureRecognizer) {
         //获取当前点击的坐标
         highlightedButtonAtPoint(tap.locationInView(toolBarView!))
     }
     
-
+    
     func highlightButtonAtIndex(index:Int) {
         _currentPage = index
-
+        
         let button = buttons[index]
         button.highlighted = true
         for i:Int in 0..<buttons.count where i != index {
             buttons[i].highlighted = false
         }
         
-//        let spring = CASpringAnimation(keyPath: "position.x")
-//        spring.damping = 5
-//        spring.fromValue = borderLayer.position.x
-//        spring.toValue = button.layer.position.x
-//        spring.duration = spring.settlingDuration;
-//        spring.initialVelocity = 10
-//        borderLayer.addAnimation(spring, forKey: nil)
-//
+        //添加弹簧动画
+        let spring = CASpringAnimation(keyPath: "position.x")
+        spring.duration = spring.settlingDuration
+        
+        spring.mass = 8 //质量，影响图层运动时的弹簧惯性，质量越大，弹簧拉伸和压缩的幅度越大
+        spring.stiffness = 2000 //刚度系数(劲度系数/弹性系数)，刚度系数越大，形变产生的力就越大，运动越快
+        spring.damping = 80 //阻尼系数，阻止弹簧伸缩的系数，阻尼系数越大，停止越快
+        spring.initialVelocity = 5 //初始速率，动画视图的初始速度大小;速率为正数时，速度方向与运动方向一致，速率为负数时，速度方向与运动方向相反
+        spring.duration = spring.settlingDuration
+        spring.removedOnCompletion = false
+        spring.fillMode = kCAFillModeForwards
+        
+        borderLayer.addAnimation(spring, forKey: nil)
+        
         borderLayer.frame.size.width = button.frame.width + 5
         borderLayer.frame.origin.x = button.frame.minX - 5
+        loadPage(_currentPage)
     }
     
     func highlightedButtonAtPoint(point:CGPoint) {
         var index:Int = -1
         for i in 0..<buttons.count {
             let btn = buttons[i]
-           //循环判断点击区域在哪个button范围内
+            //循环判断点击区域在哪个button范围内
             if CGRectContainsPoint(btn.frame, point) {
                 index = i
                 break
@@ -158,7 +167,6 @@ class ScrollTabView: UIView,UIScrollViewDelegate {
         }
         highlightButtonAtIndex(page)
     }
-
     
     
     private var pageViews = [UIViewController?]()
@@ -169,7 +177,7 @@ class ScrollTabView: UIView,UIScrollViewDelegate {
         frame.origin.x = frame.size.width * CGFloat(page)
         frame.origin.y = 0
         let newPageView = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(viewControllerIDs[page])
-
+        
         newPageView.view.frame = frame
         scrollView.addSubview(newPageView.view)
         
@@ -184,12 +192,13 @@ class ScrollTabView: UIView,UIScrollViewDelegate {
         var offsetX:CGFloat = averageSpace
         for i:Int in 0..<buttons.count {
             let button = buttons[i]
+            button.frame.size.width = bounds.width/CGFloat(buttons.count)
             button.frame.origin.x = offsetX
             offsetX += button.frame.size.width + averageSpace
-            
+            borderLayer.frame.size.width = button.frame.width
             if button.highlighted {
-                borderLayer.frame.origin.x = button.frame.origin.x - 5
-                borderLayer.frame.origin.y = button.frame.origin.y + button.frame.height 
+                borderLayer.frame.origin.x = button.frame.origin.x
+                borderLayer.frame.origin.y = toolBarView!.bounds.height - 2
             }
         }
         scrollView.frame = CGRectMake(0, contentOffset + toolBarView!.frame.height, bounds.width, bounds.height - (contentOffset + toolBarView!.frame.height))
@@ -217,5 +226,5 @@ class ScrollTabView: UIView,UIScrollViewDelegate {
     }
     
     
-
+    
 }
