@@ -14,12 +14,18 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
     @IBOutlet weak var topContainer:UIView!
     @IBOutlet weak var shadowView:UIView!
     
-    
     @IBAction func onListTapping(sender:AnyObject!) {
         
         if let controller = storyboard?.instantiateViewControllerWithIdentifier("FilterTableViewController") {
             controller.view.frame.size.height = UIScreen.mainScreen().bounds.height - 200
             
+            let maskPath = UIBezierPath(roundedRect: controller.view.bounds,byRoundingCorners: [UIRectCorner.TopRight, .TopLeft],cornerRadii:CGSizeMake(4, 4))
+            let maskLayer = CAShapeLayer()
+            maskLayer.frame = controller.view.bounds
+            maskLayer.frame.size.height += 1000
+            maskLayer.path = maskPath.CGPath
+            controller.view.layer.mask = maskLayer
+            //controller.view.layer.masksToBounds = false
             presentSemiViewController(controller)
         }
     }
@@ -40,8 +46,6 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
         shadowView.layer.shadowColor   = UIColor.grayColor().CGColor
         shadowView.layer.shadowRadius  = 4
         shadowView.layer.shadowOpacity = 0.8
-
-
     }
     
     @IBAction func onPopupButtonTapped(button:UIButton) {
@@ -51,7 +55,6 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "popoverSegue" {
@@ -65,13 +68,10 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate {
         }
     }
     
-    
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.None
     }
     
-    
-
 
 }
 
